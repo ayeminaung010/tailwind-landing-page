@@ -31,6 +31,23 @@
             <div class=" hidden md:block">
                 <a href="#" class="p-3 px-6 text-white bg-BrightRed rounded-full hover:bg-orange-400">Get Started</a>
             </div>
+
+            <!-- hambuger menu  -->
+            <button id="menu-btn" class=" hambugerMenuContainer flex  justify-center items-center rounded  md:hidden focus:outline-none">
+                <svg class="w-7 h-7" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
+
+            
+        </div>
+        <!-- mobile menu -->
+        <div class="md:hidden menu">
+            <div id="menu" class=" flex flex-col items-center justify-center md:hidden py-8  w-full space-y-6 m-0 font-bold shadow-md ">
+                <a href="#" class=" hover:text-GrayishBlue py-3 hover:bg-BrightRed w-full text-center ">Pricing</a>
+                <a href="#" class=" hover:text-GrayishBlue py-3 hover:bg-BrightRed w-full text-center ">Product</a>
+                <a href="#" class=" hover:text-GrayishBlue py-3 hover:bg-BrightRed w-full text-center ">About Us</a>
+                <a href="#" class=" hover:text-GrayishBlue py-3 hover:bg-BrightRed w-full text-center ">Careers</a>
+                <a href="#" class=" hover:text-GrayishBlue py-3 hover:bg-BrightRed w-full text-center ">Community</a>
+            </div>
         </div>
     </nav>
 
@@ -264,4 +281,11 @@
 
     <script src="script.js" type="module"></script>
 </body>
+<script>
+    const menuContainer = document.querySelector('.hambugerMenuContainer');
+    const menuList = document.querySelector('.menu');
+    menuContainer.addEventListener('click',function(){
+        menuList.classList.toggle('open');
+    })
+</script>
 </html>
